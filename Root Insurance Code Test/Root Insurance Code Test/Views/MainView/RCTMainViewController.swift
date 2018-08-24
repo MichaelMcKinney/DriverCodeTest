@@ -22,15 +22,16 @@ class RCTMainViewController: UIViewController {
 	
 	@IBOutlet weak var ResultsTextView: UITextView!
 	
-	let ViewModel:RCTMainViewModel = RCTMainViewModel()
+	var ViewModel:RCTMainViewModel?
 
 	//MARK: INITIALIZATION
+	
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.BindViewModel()
-		self.SetupUI()
 		
+		self.SetupUI()
 	}
 
 	override func didReceiveMemoryWarning() {
@@ -39,7 +40,7 @@ class RCTMainViewController: UIViewController {
 	
 	func BindViewModel(){
 		//Perform any preparation on the ViewModel
-		
+		self.ViewModel = RCTMainViewModel(Parent:self)
 	}
 	
 	func SetupUI(){
@@ -51,7 +52,9 @@ class RCTMainViewController: UIViewController {
 	//MARK: BUTTON COMMANDS
 	
 	@IBAction func DidSelectLoadTestCommands(_ sender: Any) {
-		self.CommandsTextView.text = self.ViewModel.GetTestCommands()
+		if let testCommands = self.ViewModel?.GetTestCommands(){
+			self.CommandsTextView.text = testCommands
+		}
 	}
 	
 	@IBAction func DidSelectRunCommands(_ sender: Any) {
@@ -60,18 +63,30 @@ class RCTMainViewController: UIViewController {
 	}
 	
 	@IBAction func DidSelectReset(_ sender: Any) {
-		self.ViewModel.ResetData()
+		self.ViewModel?.ResetData()
 		self.SetupUI()
 	}
 	
 	//MARK: ALGORITHM
 	
 	func ProcessCommands(){
-		self.ViewModel.ProcessCommands(Input: self.CommandsTextView.text)
+		self.ViewModel?.ProcessCommands(Input: self.CommandsTextView.text)
 	}
 	
 	func PresentResults(){
-		self.ResultsTextView.text = ViewModel.GetResults()
+		if let resultsText = ViewModel?.GetResults(){
+			self.ResultsTextView.text = resultsText
+		}else{
+			self.ResultsTextView.text = ""
+		}
+	}
+	
+	//MARK: ALERTS
+	
+	func PresentAlert(Title:String, Body:String){
+		let alert = UIAlertController(title: Title, message: Body, preferredStyle: UIAlertControllerStyle.alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+		self.present(alert, animated: true, completion: nil)
 	}
 }
 
