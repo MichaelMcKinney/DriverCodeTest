@@ -47,24 +47,34 @@ class RCTMainViewController: UIViewController {
 		//Prepare any UI elements for first use
 		self.CommandsTextView.text = ""
 		self.ResultsTextView.text = ""
+		
+		let tapGesture = UITapGestureRecognizer(target: self, action:#selector(self.dismissKeyboard))
+		self.view.addGestureRecognizer(tapGesture)
 	}
 	
 	//MARK: BUTTON COMMANDS
 	
 	@IBAction func DidSelectLoadTestCommands(_ sender: Any) {
+		self.dismissKeyboard()
 		if let testCommands = self.ViewModel?.GetTestCommands(){
 			self.CommandsTextView.text = testCommands
 		}
 	}
 	
 	@IBAction func DidSelectRunCommands(_ sender: Any) {
+		self.dismissKeyboard()
 		self.ProcessCommands()
 		self.PresentResults()
 	}
 	
 	@IBAction func DidSelectReset(_ sender: Any) {
+		self.dismissKeyboard()
 		self.ViewModel?.ResetData()
 		self.SetupUI()
+	}
+	
+	@objc func dismissKeyboard () {
+		self.view.endEditing(true)
 	}
 	
 	//MARK: ALGORITHM

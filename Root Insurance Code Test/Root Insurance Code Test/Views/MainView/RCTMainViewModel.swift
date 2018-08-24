@@ -79,6 +79,8 @@ class RCTMainViewModel {
 				
 			}else{
 				//Ignore unrecognized commands
+				self.ParentView.PresentAlert(Title:"Unrecognized Command Error",Body:"There is a problem with the entered commands. Make sure they contain a valid \"Driver\" or \"Trip\" command. Load Test Commands for an example of acceptable input")
+				return
 			}
 			
 		}
