@@ -76,18 +76,25 @@ class RCTMainViewModel {
 				let endTimeString = commandsInLine[3]
 				let distanceString = commandsInLine[4]
 				
-				let startTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: startTimeString)
-				let endTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: endTimeString)
-				
-				if(stringComponents.count < 2){
-					//time is incomplete, skip this iteration of the loop
+				//check both time strings for validity
+				if(!self.ValidTimeString(TimeString: endTimeString) || !self.ValidTimeString(TimeString: startTimeString) || !self.ValidDistanceString(DistanceString: distanceString)){
+					//skip this input line
 					continue
 				}
 				
-				let startTimeComponents = self.DateComponentsFromTimeString(TimeString: startTimeString)
-				let endTimeComponents = self.DateComponentsFromTimeString(TimeString: endTimeString)
 				
+				let startTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: startTimeString)
+				let endTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: endTimeString)
 				
+//				if(stringComponents.count < 2){
+//					//time is incomplete, skip this iteration of the loop
+//					continue
+//				}
+//
+//				let startTimeComponents = self.DateComponentsFromTimeString(TimeString: startTimeString)
+//				let endTimeComponents = self.DateComponentsFromTimeString(TimeString: endTimeString)
+//
+//
 				//turn start / end time minutes and hours into DateComponents
 				
 				//add trip to driver
@@ -108,6 +115,15 @@ class RCTMainViewModel {
 		}
 	}
 	
+	func ValidTimeString(TimeString: String) -> Bool{
+		return (TimeString.range(of: "[0-1][0-9]:[0-5][0-9]", options: .regularExpression) != nil)
+	}
+	
+	func ValidDistanceString(DistanceString: String) -> Bool{
+		return CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: yourString))
+
+	}
+	
 	func TimeStringComponentsFromTimeString(TimeString:String) -> (String,String){
 		let stringsToReturn = TimeString.components(separatedBy: ":")
 		if(stringsToReturn.count < 2){
@@ -116,12 +132,12 @@ class RCTMainViewModel {
 		return (stringsToReturn[0],stringsToReturn[1])
 	}
 	
-	func DateComponentsFromHoursMinutes(MinuteString:String, HourString) -> DateComponents{
+	func DateComponentsFromHoursMinutes(MinuteString:String, HourString: String) -> DateComponents{
 		let calendar = Calendar.current
 		let componentsToReturn = DateComponents()
 
 		
-		componentsToReturn.hour =
+		//componentsToReturn.hour =
 	}
 	
 	func DoesDriverExist(Name: String) -> Bool{
