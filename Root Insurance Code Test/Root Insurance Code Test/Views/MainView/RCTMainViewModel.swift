@@ -120,7 +120,7 @@ class RCTMainViewModel {
 		Dan: 39 miles @ 47 mph
 		Bob: 0 miles
 		*/
-	}	
+	}
 	
 	//MARK: DRIVER UTILITY
 	
@@ -147,7 +147,7 @@ class RCTMainViewModel {
 	//MARK: VALIDATION
 	
 	func ValidTimeString(TimeString: String) -> Bool{
-		return (TimeString.range(of: "[0-1][0-9]:[0-5][0-9]", options: .regularExpression) != nil)
+		return (TimeString.range(of: "[0-2][0-9]:[0-5][0-9]", options: .regularExpression) != nil)
 	}
 	
 	func ValidDistanceString(DistanceString: String) -> Bool{
@@ -176,12 +176,6 @@ class RCTMainViewModel {
 		
 		return componentsToReturn
 	}
-	
-	
-	
-	
-	
-	
 }
 
 
