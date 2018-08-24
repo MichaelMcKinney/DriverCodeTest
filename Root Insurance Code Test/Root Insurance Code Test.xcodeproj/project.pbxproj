@@ -1,0 +1,629 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1748B47D21304F9800848A80 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748B47C21304F9800848A80 /* Driver.swift */; };
+		1748B4812130532400848A80 /* RCTMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748B4802130532400848A80 /* RCTMainViewModel.swift */; };
+		17DB7588212E23CE00E3359F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB7587212E23CE00E3359F /* AppDelegate.swift */; };
+		17DB758A212E23CE00E3359F /* RCTMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB7589212E23CE00E3359F /* RCTMainViewController.swift */; };
+		17DB758D212E23CE00E3359F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DB758B212E23CE00E3359F /* Main.storyboard */; };
+		17DB758F212E23CF00E3359F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17DB758E212E23CF00E3359F /* Assets.xcassets */; };
+		17DB7592212E23CF00E3359F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17DB7590212E23CF00E3359F /* LaunchScreen.storyboard */; };
+		17DB759D212E23CF00E3359F /* Root_Insurance_Code_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB759C212E23CF00E3359F /* Root_Insurance_Code_TestTests.swift */; };
+		17DB75A8212E23CF00E3359F /* Root_Insurance_Code_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB75A7212E23CF00E3359F /* Root_Insurance_Code_TestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17DB7599212E23CF00E3359F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17DB757C212E23CE00E3359F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17DB7583212E23CE00E3359F;
+			remoteInfo = "Root Insurance Code Test";
+		};
+		17DB75A4212E23CF00E3359F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17DB757C212E23CE00E3359F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17DB7583212E23CE00E3359F;
+			remoteInfo = "Root Insurance Code Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1748B47C21304F9800848A80 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
+		1748B4802130532400848A80 /* RCTMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTMainViewModel.swift; sourceTree = "<group>"; };
+		17DB7584212E23CE00E3359F /* Root Insurance Code Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Root Insurance Code Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17DB7587212E23CE00E3359F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17DB7589212E23CE00E3359F /* RCTMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTMainViewController.swift; sourceTree = "<group>"; };
+		17DB758C212E23CE00E3359F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17DB758E212E23CF00E3359F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17DB7591212E23CF00E3359F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17DB7593212E23CF00E3359F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17DB7598212E23CF00E3359F /* Root Insurance Code TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Root Insurance Code TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17DB759C212E23CF00E3359F /* Root_Insurance_Code_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root_Insurance_Code_TestTests.swift; sourceTree = "<group>"; };
+		17DB759E212E23CF00E3359F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17DB75A3212E23CF00E3359F /* Root Insurance Code TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Root Insurance Code TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17DB75A7212E23CF00E3359F /* Root_Insurance_Code_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root_Insurance_Code_TestUITests.swift; sourceTree = "<group>"; };
+		17DB75A9212E23CF00E3359F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17DB7581212E23CE00E3359F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB7595212E23CF00E3359F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB75A0212E23CF00E3359F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1748B47A21304F7400848A80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1748B47C21304F9800848A80 /* Driver.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1748B47B21304F7D00848A80 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1748B47F2130530400848A80 /* MainView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1748B47E2130504000848A80 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				17DB758B212E23CE00E3359F /* Main.storyboard */,
+				17DB7590212E23CF00E3359F /* LaunchScreen.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		1748B47F2130530400848A80 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				17DB7589212E23CE00E3359F /* RCTMainViewController.swift */,
+				1748B4802130532400848A80 /* RCTMainViewModel.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		17DB757B212E23CE00E3359F = {
+			isa = PBXGroup;
+			children = (
+				17DB7586212E23CE00E3359F /* Root Insurance Code Test */,
+				17DB759B212E23CF00E3359F /* Root Insurance Code TestTests */,
+				17DB75A6212E23CF00E3359F /* Root Insurance Code TestUITests */,
+				17DB7585212E23CE00E3359F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17DB7585212E23CE00E3359F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17DB7584212E23CE00E3359F /* Root Insurance Code Test.app */,
+				17DB7598212E23CF00E3359F /* Root Insurance Code TestTests.xctest */,
+				17DB75A3212E23CF00E3359F /* Root Insurance Code TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17DB7586212E23CE00E3359F /* Root Insurance Code Test */ = {
+			isa = PBXGroup;
+			children = (
+				1748B47B21304F7D00848A80 /* Views */,
+				1748B47A21304F7400848A80 /* Models */,
+				1748B47E2130504000848A80 /* StoryBoards */,
+				17DB7587212E23CE00E3359F /* AppDelegate.swift */,
+				17DB758E212E23CF00E3359F /* Assets.xcassets */,
+				17DB7593212E23CF00E3359F /* Info.plist */,
+			);
+			path = "Root Insurance Code Test";
+			sourceTree = "<group>";
+		};
+		17DB759B212E23CF00E3359F /* Root Insurance Code TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				17DB759C212E23CF00E3359F /* Root_Insurance_Code_TestTests.swift */,
+				17DB759E212E23CF00E3359F /* Info.plist */,
+			);
+			path = "Root Insurance Code TestTests";
+			sourceTree = "<group>";
+		};
+		17DB75A6212E23CF00E3359F /* Root Insurance Code TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17DB75A7212E23CF00E3359F /* Root_Insurance_Code_TestUITests.swift */,
+				17DB75A9212E23CF00E3359F /* Info.plist */,
+			);
+			path = "Root Insurance Code TestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17DB7583212E23CE00E3359F /* Root Insurance Code Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17DB75AC212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code Test" */;
+			buildPhases = (
+				17DB7580212E23CE00E3359F /* Sources */,
+				17DB7581212E23CE00E3359F /* Frameworks */,
+				17DB7582212E23CE00E3359F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Root Insurance Code Test";
+			productName = "Root Insurance Code Test";
+			productReference = 17DB7584212E23CE00E3359F /* Root Insurance Code Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17DB7597212E23CF00E3359F /* Root Insurance Code TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17DB75AF212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code TestTests" */;
+			buildPhases = (
+				17DB7594212E23CF00E3359F /* Sources */,
+				17DB7595212E23CF00E3359F /* Frameworks */,
+				17DB7596212E23CF00E3359F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17DB759A212E23CF00E3359F /* PBXTargetDependency */,
+			);
+			name = "Root Insurance Code TestTests";
+			productName = "Root Insurance Code TestTests";
+			productReference = 17DB7598212E23CF00E3359F /* Root Insurance Code TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17DB75A2212E23CF00E3359F /* Root Insurance Code TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17DB75B2212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code TestUITests" */;
+			buildPhases = (
+				17DB759F212E23CF00E3359F /* Sources */,
+				17DB75A0212E23CF00E3359F /* Frameworks */,
+				17DB75A1212E23CF00E3359F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17DB75A5212E23CF00E3359F /* PBXTargetDependency */,
+			);
+			name = "Root Insurance Code TestUITests";
+			productName = "Root Insurance Code TestUITests";
+			productReference = 17DB75A3212E23CF00E3359F /* Root Insurance Code TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17DB757C212E23CE00E3359F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Michael McKinney";
+				TargetAttributes = {
+					17DB7583212E23CE00E3359F = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					17DB7597212E23CF00E3359F = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 17DB7583212E23CE00E3359F;
+					};
+					17DB75A2212E23CF00E3359F = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 17DB7583212E23CE00E3359F;
+					};
+				};
+			};
+			buildConfigurationList = 17DB757F212E23CE00E3359F /* Build configuration list for PBXProject "Root Insurance Code Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17DB757B212E23CE00E3359F;
+			productRefGroup = 17DB7585212E23CE00E3359F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17DB7583212E23CE00E3359F /* Root Insurance Code Test */,
+				17DB7597212E23CF00E3359F /* Root Insurance Code TestTests */,
+				17DB75A2212E23CF00E3359F /* Root Insurance Code TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17DB7582212E23CE00E3359F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17DB7592212E23CF00E3359F /* LaunchScreen.storyboard in Resources */,
+				17DB758F212E23CF00E3359F /* Assets.xcassets in Resources */,
+				17DB758D212E23CE00E3359F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB7596212E23CF00E3359F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB75A1212E23CF00E3359F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17DB7580212E23CE00E3359F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1748B47D21304F9800848A80 /* Driver.swift in Sources */,
+				17DB758A212E23CE00E3359F /* RCTMainViewController.swift in Sources */,
+				17DB7588212E23CE00E3359F /* AppDelegate.swift in Sources */,
+				1748B4812130532400848A80 /* RCTMainViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB7594212E23CF00E3359F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17DB759D212E23CF00E3359F /* Root_Insurance_Code_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17DB759F212E23CF00E3359F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17DB75A8212E23CF00E3359F /* Root_Insurance_Code_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17DB759A212E23CF00E3359F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17DB7583212E23CE00E3359F /* Root Insurance Code Test */;
+			targetProxy = 17DB7599212E23CF00E3359F /* PBXContainerItemProxy */;
+		};
+		17DB75A5212E23CF00E3359F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17DB7583212E23CE00E3359F /* Root Insurance Code Test */;
+			targetProxy = 17DB75A4212E23CF00E3359F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17DB758B212E23CE00E3359F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17DB758C212E23CE00E3359F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17DB7590212E23CF00E3359F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17DB7591212E23CF00E3359F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17DB75AA212E23CF00E3359F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17DB75AB212E23CF00E3359F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17DB75AD212E23CF00E3359F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		17DB75AE212E23CF00E3359F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		17DB75B0212E23CF00E3359F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Root Insurance Code Test.app/Root Insurance Code Test";
+			};
+			name = Debug;
+		};
+		17DB75B1212E23CF00E3359F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Root Insurance Code Test.app/Root Insurance Code Test";
+			};
+			name = Release;
+		};
+		17DB75B3212E23CF00E3359F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Root Insurance Code Test";
+			};
+			name = Debug;
+		};
+		17DB75B4212E23CF00E3359F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = "Root Insurance Code TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "MichaelMcKinney.Root-Insurance-Code-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Root Insurance Code Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17DB757F212E23CE00E3359F /* Build configuration list for PBXProject "Root Insurance Code Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17DB75AA212E23CF00E3359F /* Debug */,
+				17DB75AB212E23CF00E3359F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17DB75AC212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17DB75AD212E23CF00E3359F /* Debug */,
+				17DB75AE212E23CF00E3359F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17DB75AF212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17DB75B0212E23CF00E3359F /* Debug */,
+				17DB75B1212E23CF00E3359F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17DB75B2212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17DB75B3212E23CF00E3359F /* Debug */,
+				17DB75B4212E23CF00E3359F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17DB757C212E23CE00E3359F /* Project object */;
+}
