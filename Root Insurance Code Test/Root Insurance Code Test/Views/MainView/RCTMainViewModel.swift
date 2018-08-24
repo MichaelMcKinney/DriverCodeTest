@@ -16,9 +16,13 @@ class RCTMainViewModel {
 	var Results:String = ""
 	let TestCommands = "Driver Dan\nDriver Alex\nDriver Bob\nTrip Dan 07:15 07:45 17.3\nTrip Dan 06:12 06:32 21.8\nTrip Alex 12:01 13:16 42.0"
 	
+	//MARK: INITIALIZATION
+	
 	init(Parent:RCTMainViewController) {
 		self.ParentView = Parent
 	}
+	
+	//MARK: VIEW SUPPORT
 	
 	func ResetData(){
 		self.Records = []
@@ -46,7 +50,7 @@ class RCTMainViewModel {
 			if(commandsInLine.count < 2){
 				//present an error to the user
 				self.ParentView.PresentAlert(Title:"Command Error",Body:"There is a problem with the entered commands. Make sure they contain a valid command and any additional criteria. Load Test Commands for an example of acceptable input")
-				return
+				continue
 			}
 			
 			let driverName = commandsInLine[1]
@@ -63,81 +67,72 @@ class RCTMainViewModel {
 				if(commandsInLine.count < 5){
 					//present an error to the user
 					self.ParentView.PresentAlert(Title:"Trip Command Error",Body:"There is a problem with the entered \"Trip\" commands. Make sure they contain a name, a start time, an end time and a distance. Load Test Commands for an example of acceptable input")
-					return
+					continue
 				}
 				
-				//Make sure driver exists in records
-				if(!self.DoesDriverExist(Name: driverName)){
-					//If no driver add one
-					Records.append(Driver(Name:driverName))
-				}
-				
+				//Make sure driver exists in records, or if they don't then make one
+				let currentDriver = GetDriverFromRecordsWithName(DriverName: commandsInLine[1])
 				let startTimeString = commandsInLine[2]
 				let endTimeString = commandsInLine[3]
 				let distanceString = commandsInLine[4]
 				
-				//check both time strings for validity
-				if(!self.ValidTimeString(TimeString: endTimeString) || !self.ValidTimeString(TimeString: startTimeString) || !self.ValidDistanceString(DistanceString: distanceString)){
+				//check both time strings and distance string for validity
+				if(!self.ValidTimeString(TimeString: endTimeString) || !self.ValidTimeString(TimeString: startTimeString) ||
+					!self.ValidDistanceString(DistanceString: distanceString)){
 					//skip this input line
 					continue
 				}
 				
-				
 				let startTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: startTimeString)
 				let endTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: endTimeString)
 				
-//				if(stringComponents.count < 2){
-//					//time is incomplete, skip this iteration of the loop
-//					continue
-//				}
-//
-//				let startTimeComponents = self.DateComponentsFromTimeString(TimeString: startTimeString)
-//				let endTimeComponents = self.DateComponentsFromTimeString(TimeString: endTimeString)
-//
-//
-				//turn start / end time minutes and hours into DateComponents
-				
-				//add trip to driver
-				
+				let startTimeDateComponents = DateComponentsFromHoursMinutes(Hours: startTimeHoursMinutes.0,
+																			 Minutes: startTimeHoursMinutes.1)
+				let endTimeDateComponents = DateComponentsFromHoursMinutes(Hours: endTimeHoursMinutes.0,
+																		   Minutes: endTimeHoursMinutes.1)
+				if let distanceFloat = Float(distanceString){
+					currentDriver.AddTrip(StartTimeComponents: startTimeDateComponents, EndTimeComponents: endTimeDateComponents, Distance: distanceFloat)
+				}else{
+					//invalid distance string, skip this input line
+					continue
+				}
 				
 			}else{
 				//Ignore unrecognized commands
 				self.ParentView.PresentAlert(Title:"Unrecognized Command Error",Body:"There is a problem with the entered commands. Make sure they contain a valid \"Driver\" or \"Trip\" command. Load Test Commands for an example of acceptable input")
-				return
+				continue
 			}
-			
 		}
 		
+		self.UpdateResults()
+	}
+	
+	func UpdateResults(){
+		Records.sort(by: { $0.Distance > $1.Distance })
+		Results = ""
 		
 		for driver in Records{
-			Results += driver.Name
+			Results += driver.ResultsSummary()
 			Results += "\n"
 		}
-	}
+		/*
+		Alex: 42 miles @ 34 mph
+		Dan: 39 miles @ 47 mph
+		Bob: 0 miles
+		*/
+	}	
 	
-	func ValidTimeString(TimeString: String) -> Bool{
-		return (TimeString.range(of: "[0-1][0-9]:[0-5][0-9]", options: .regularExpression) != nil)
-	}
+	//MARK: DRIVER UTILITY
 	
-	func ValidDistanceString(DistanceString: String) -> Bool{
-		return CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: yourString))
-
-	}
-	
-	func TimeStringComponentsFromTimeString(TimeString:String) -> (String,String){
-		let stringsToReturn = TimeString.components(separatedBy: ":")
-		if(stringsToReturn.count < 2){
-			return ("00","00")
+	func GetDriverFromRecordsWithName(DriverName: String) -> Driver{
+		for driver in Records{
+			if (driver.Name == DriverName){
+				return driver
+			}
 		}
-		return (stringsToReturn[0],stringsToReturn[1])
-	}
-	
-	func DateComponentsFromHoursMinutes(MinuteString:String, HourString: String) -> DateComponents{
-		let calendar = Calendar.current
-		let componentsToReturn = DateComponents()
-
-		
-		//componentsToReturn.hour =
+		//if no driver with that name exists, create it then return it
+		Records.append(Driver(Name: DriverName))
+		return GetDriverFromRecordsWithName(DriverName:DriverName)
 	}
 	
 	func DoesDriverExist(Name: String) -> Bool{
@@ -148,6 +143,45 @@ class RCTMainViewModel {
 		}
 		return false
 	}
+	
+	//MARK: VALIDATION
+	
+	func ValidTimeString(TimeString: String) -> Bool{
+		return (TimeString.range(of: "[0-1][0-9]:[0-5][0-9]", options: .regularExpression) != nil)
+	}
+	
+	func ValidDistanceString(DistanceString: String) -> Bool{
+		if let _: Float = Float(DistanceString){
+			return true
+		}
+		return false
+	}
+	
+	//MARK: DATA MANIPULATION
+	
+	func TimeStringComponentsFromTimeString(TimeString:String) -> (String,String){
+		let stringsToReturn = TimeString.components(separatedBy: ":")
+		return (stringsToReturn[0],stringsToReturn[1])
+	}
+	
+	func DateComponentsFromHoursMinutes(Hours:String, Minutes: String) -> DateComponents{
+		var componentsToReturn = DateComponents()
+		
+		if let hoursInt = Int(Hours){
+			if let minutesInt = Int(Minutes){
+				componentsToReturn.hour = hoursInt
+				componentsToReturn.minute = minutesInt
+			}
+		}
+		
+		return componentsToReturn
+	}
+	
+	
+	
+	
+	
+	
 }
 
 
