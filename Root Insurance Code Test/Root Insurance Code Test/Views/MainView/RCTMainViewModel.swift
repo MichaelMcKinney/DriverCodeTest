@@ -72,10 +72,26 @@ class RCTMainViewModel {
 					Records.append(Driver(Name:driverName))
 				}
 				
-				//TODO:
-				//get start time command
-				//get end time command
-				//get distance command
+				let startTimeString = commandsInLine[2]
+				let endTimeString = commandsInLine[3]
+				let distanceString = commandsInLine[4]
+				
+				let startTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: startTimeString)
+				let endTimeHoursMinutes:(String,String) = TimeStringComponentsFromTimeString(TimeString: endTimeString)
+				
+				if(stringComponents.count < 2){
+					//time is incomplete, skip this iteration of the loop
+					continue
+				}
+				
+				let startTimeComponents = self.DateComponentsFromTimeString(TimeString: startTimeString)
+				let endTimeComponents = self.DateComponentsFromTimeString(TimeString: endTimeString)
+				
+				
+				//turn start / end time minutes and hours into DateComponents
+				
+				//add trip to driver
+				
 				
 			}else{
 				//Ignore unrecognized commands
@@ -90,6 +106,22 @@ class RCTMainViewModel {
 			Results += driver.Name
 			Results += "\n"
 		}
+	}
+	
+	func TimeStringComponentsFromTimeString(TimeString:String) -> (String,String){
+		let stringsToReturn = TimeString.components(separatedBy: ":")
+		if(stringsToReturn.count < 2){
+			return ("00","00")
+		}
+		return (stringsToReturn[0],stringsToReturn[1])
+	}
+	
+	func DateComponentsFromHoursMinutes(MinuteString:String, HourString) -> DateComponents{
+		let calendar = Calendar.current
+		let componentsToReturn = DateComponents()
+
+		
+		componentsToReturn.hour =
 	}
 	
 	func DoesDriverExist(Name: String) -> Bool{
