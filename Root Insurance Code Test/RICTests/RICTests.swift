@@ -1,15 +1,15 @@
 //
-//  Root_Insurance_Code_TestTests.swift
-//  Root Insurance Code TestTests
+//  RICTests.swift
+//  RICTests
 //
-//  Created by Michael McKinney on 8/22/18.
+//  Created by Michael McKinney on 8/31/18.
 //  Copyright © 2018 Michael McKinney. All rights reserved.
 //
 
 import XCTest
 @testable import Root_Insurance_Code_Test
 
-class Root_Insurance_Code_TestTests: XCTestCase {
+class RICTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -24,6 +24,11 @@ class Root_Insurance_Code_TestTests: XCTestCase {
 	//MARK: DRIVER FUNCTIONS
 	
 	func testDriverInitWithNoValues(){
+		let testDriver = Driver(Name: "mrTest")
+		
+		XCTAssert(testDriver.Name == "mrTest")
+		XCTAssert(testDriver.Distance == 0)
+		XCTAssert(testDriver.Speed == 0)
 		
 	}
 	
@@ -71,7 +76,7 @@ class Root_Insurance_Code_TestTests: XCTestCase {
 	}
 	
 	func testViewModelTimeStringComponents(){
-
+		
 	}
 	
 	func testViewModelDateComponents(){
@@ -83,7 +88,8 @@ class Root_Insurance_Code_TestTests: XCTestCase {
 	func testViewControllerAllUIExists(){
 		
 	}
-
 	
-    
+	
+	
 }
+
