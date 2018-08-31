@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1733DE4A2139D59500AC006C /* RICTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733DE492139D59500AC006C /* RICTests.swift */; };
+		1733DE582139F29A00AC006C /* RICUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733DE572139F29A00AC006C /* RICUITests.swift */; };
 		1748B47D21304F9800848A80 /* Driver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748B47C21304F9800848A80 /* Driver.swift */; };
 		1748B4812130532400848A80 /* RCTMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1748B4802130532400848A80 /* RCTMainViewModel.swift */; };
 		17DB7588212E23CE00E3359F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DB7587212E23CE00E3359F /* AppDelegate.swift */; };
@@ -25,12 +26,22 @@
 			remoteGlobalIDString = 17DB7583212E23CE00E3359F;
 			remoteInfo = "Root Insurance Code Test";
 		};
+		1733DE5A2139F29A00AC006C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17DB757C212E23CE00E3359F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17DB7583212E23CE00E3359F;
+			remoteInfo = "Root Insurance Code Test";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1733DE472139D59500AC006C /* RICTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RICTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1733DE492139D59500AC006C /* RICTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RICTests.swift; sourceTree = "<group>"; };
 		1733DE4B2139D59500AC006C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1733DE552139F29A00AC006C /* RICUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RICUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1733DE572139F29A00AC006C /* RICUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RICUITests.swift; sourceTree = "<group>"; };
+		1733DE592139F29A00AC006C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1748B47C21304F9800848A80 /* Driver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Driver.swift; sourceTree = "<group>"; };
 		1748B4802130532400848A80 /* RCTMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCTMainViewModel.swift; sourceTree = "<group>"; };
 		17DB7584212E23CE00E3359F /* Root Insurance Code Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Root Insurance Code Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +55,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		1733DE442139D59500AC006C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1733DE522139F29A00AC006C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -67,6 +85,15 @@
 				1733DE4B2139D59500AC006C /* Info.plist */,
 			);
 			path = RICTests;
+			sourceTree = "<group>";
+		};
+		1733DE562139F29A00AC006C /* RICUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1733DE572139F29A00AC006C /* RICUITests.swift */,
+				1733DE592139F29A00AC006C /* Info.plist */,
+			);
+			path = RICUITests;
 			sourceTree = "<group>";
 		};
 		1748B47A21304F7400848A80 /* Models */ = {
@@ -108,6 +135,7 @@
 			children = (
 				17DB7586212E23CE00E3359F /* Root Insurance Code Test */,
 				1733DE482139D59500AC006C /* RICTests */,
+				1733DE562139F29A00AC006C /* RICUITests */,
 				17DB7585212E23CE00E3359F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +145,7 @@
 			children = (
 				17DB7584212E23CE00E3359F /* Root Insurance Code Test.app */,
 				1733DE472139D59500AC006C /* RICTests.xctest */,
+				1733DE552139F29A00AC006C /* RICUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,6 +184,24 @@
 			productReference = 1733DE472139D59500AC006C /* RICTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		1733DE542139F29A00AC006C /* RICUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1733DE5C2139F29A00AC006C /* Build configuration list for PBXNativeTarget "RICUITests" */;
+			buildPhases = (
+				1733DE512139F29A00AC006C /* Sources */,
+				1733DE522139F29A00AC006C /* Frameworks */,
+				1733DE532139F29A00AC006C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1733DE5B2139F29A00AC006C /* PBXTargetDependency */,
+			);
+			name = RICUITests;
+			productName = RICUITests;
+			productReference = 1733DE552139F29A00AC006C /* RICUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		17DB7583212E23CE00E3359F /* Root Insurance Code Test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17DB75AC212E23CF00E3359F /* Build configuration list for PBXNativeTarget "Root Insurance Code Test" */;
@@ -186,6 +233,10 @@
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = 17DB7583212E23CE00E3359F;
 					};
+					1733DE542139F29A00AC006C = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 17DB7583212E23CE00E3359F;
+					};
 					17DB7583212E23CE00E3359F = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -206,12 +257,20 @@
 			targets = (
 				17DB7583212E23CE00E3359F /* Root Insurance Code Test */,
 				1733DE462139D59500AC006C /* RICTests */,
+				1733DE542139F29A00AC006C /* RICUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1733DE452139D59500AC006C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1733DE532139F29A00AC006C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,6 +298,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1733DE512139F29A00AC006C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1733DE582139F29A00AC006C /* RICUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17DB7580212E23CE00E3359F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +324,11 @@
 			isa = PBXTargetDependency;
 			target = 17DB7583212E23CE00E3359F /* Root Insurance Code Test */;
 			targetProxy = 1733DE4C2139D59500AC006C /* PBXContainerItemProxy */;
+		};
+		1733DE5B2139F29A00AC006C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17DB7583212E23CE00E3359F /* Root Insurance Code Test */;
+			targetProxy = 1733DE5A2139F29A00AC006C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -319,6 +391,46 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Root Insurance Code Test.app/Root Insurance Code Test";
+			};
+			name = Release;
+		};
+		1733DE5D2139F29A00AC006C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = RICUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MichaelMcKinney.RICUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Root Insurance Code Test";
+			};
+			name = Debug;
+		};
+		1733DE5E2139F29A00AC006C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5Q9HNDNU6L;
+				INFOPLIST_FILE = RICUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MichaelMcKinney.RICUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Root Insurance Code Test";
 			};
 			name = Release;
 		};
@@ -481,6 +593,15 @@
 			buildConfigurations = (
 				1733DE4F2139D59500AC006C /* Debug */,
 				1733DE502139D59500AC006C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1733DE5C2139F29A00AC006C /* Build configuration list for PBXNativeTarget "RICUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1733DE5D2139F29A00AC006C /* Debug */,
+				1733DE5E2139F29A00AC006C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Root Insurance Code Test.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1733DE542139F29A00AC006C"
+               BuildableName = "RICUITests.xctest"
+               BlueprintName = "RICUITests"
+               ReferencedContainer = "container:Root Insurance Code Test.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

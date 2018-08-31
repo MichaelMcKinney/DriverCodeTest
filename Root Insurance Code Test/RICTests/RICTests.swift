@@ -155,17 +155,13 @@ class RICTests: XCTestCase {
 	}
 	
 	func testViewModelTimeStringComponents(){
+		let testVM = RCTMainViewModel(Parent: RCTMainViewController())
+
+		let timeString = "10:35"
+		let otherTimeString = "23:19"
 		
-	}
-	
-	func testViewModelDateComponents(){
-		
-	}
-	
-	//MARK: VIEW CONTROLLER SETUP
-	
-	func testViewControllerAllUIExists(){
-		
+		XCTAssert(testVM.TimeStringComponentsFromTimeString(TimeString: timeString) == ("10","35"))
+		XCTAssert(testVM.TimeStringComponentsFromTimeString(TimeString: otherTimeString) == ("23","19"))
 	}
 }
 
