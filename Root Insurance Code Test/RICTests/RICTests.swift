@@ -107,7 +107,7 @@ class RICTests: XCTestCase {
 		testEndDateComponents.hour = 4
 		testEndDateComponents.minute = 30
 		
-		var testDistance:Float = 10.0
+		let testDistance:Float = 10.0
 		
 		testDriver.AddTrip(StartTimeComponents: testStartDateComponents, EndTimeComponents: testEndDateComponents, Distance: testDistance)
 		
@@ -121,23 +121,37 @@ class RICTests: XCTestCase {
 	//MARK: VIEW MODEL UTILITY FUNCTIONS
 	
 	func testViewModelInitialization(){
+		let testVM = RCTMainViewModel(Parent: RCTMainViewController())
 		
-	}
-	
-	func testViewModelStringParsing(){
-		
-	}
-	
-	func testViewModelSortingDrivers(){
-		
+		XCTAssert(testVM != nil)
 	}
 	
 	func testViewModelTimeStringValidation(){
-		//REGEX
+		let testVM = RCTMainViewModel(Parent: RCTMainViewController())
+
+		let goodTimeString = "10:35"
+		let otherGoodTimeString = "23:19"
+		let badTimeString = "31:62"
+		let otherBadTimeString = "abc"
+		
+		XCTAssert(testVM.ValidTimeString(TimeString: goodTimeString))
+		XCTAssert(testVM.ValidTimeString(TimeString: otherGoodTimeString))
+		XCTAssert(!testVM.ValidTimeString(TimeString: badTimeString))
+		XCTAssert(!testVM.ValidTimeString(TimeString: otherBadTimeString))
 	}
 	
 	func testViewModelDistanceStringValidation(){
+		let testVM = RCTMainViewModel(Parent: RCTMainViewController())
 		
+		let goodDistanceString = "0"
+		let otherGoodDistanceString = "15.0"
+		let badDistanceString = "-45"
+		let otherBadDistanceString = "abc"
+		
+		XCTAssert(testVM.ValidDistanceString(DistanceString: goodDistanceString))
+		XCTAssert(testVM.ValidDistanceString(DistanceString: otherGoodDistanceString))
+		XCTAssert(!testVM.ValidDistanceString(DistanceString: badDistanceString))
+		XCTAssert(!testVM.ValidDistanceString(DistanceString: otherBadDistanceString))
 	}
 	
 	func testViewModelTimeStringComponents(){
@@ -153,8 +167,5 @@ class RICTests: XCTestCase {
 	func testViewControllerAllUIExists(){
 		
 	}
-	
-	
-	
 }
 

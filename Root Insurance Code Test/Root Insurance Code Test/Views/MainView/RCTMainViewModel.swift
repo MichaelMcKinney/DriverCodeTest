@@ -151,8 +151,10 @@ class RCTMainViewModel {
 	}
 	
 	func ValidDistanceString(DistanceString: String) -> Bool{
-		if let _: Float = Float(DistanceString){
-			return true
+		if let tempDist: Float = Float(DistanceString){
+			if(tempDist >= 0){
+				return true
+			}
 		}
 		return false
 	}
