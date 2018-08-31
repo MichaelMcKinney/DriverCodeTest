@@ -21,16 +21,69 @@ class Root_Insurance_Code_TestTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+	//MARK: DRIVER FUNCTIONS
+	
+	func testDriverInitWithNoValues(){
+		
+	}
+	
+	func testDriverInitWithValues(){
+		
+	}
+	
+	func testDriverAddFirstTrip(){
+		
+		
+	}
+	
+	func testDriverAddMultipleTrips(){
+		
+	}
+	
+	func testDriverSummaryForNoMiles(){
+		
+	}
+	
+	func testDriverSummaryForSomeMiles(){
+		
+	}
+	
+	//MARK: VIEW MODEL UTILITY FUNCTIONS
+	
+	func testViewModelInitialization(){
+		
+	}
+	
+	func testViewModelStringParsing(){
+		
+	}
+	
+	func testViewModelSortingDrivers(){
+		
+	}
+	
+	func testViewModelTimeStringValidation(){
+		//REGEX
+	}
+	
+	func testViewModelDistanceStringValidation(){
+		
+	}
+	
+	func testViewModelTimeStringComponents(){
+
+	}
+	
+	func testViewModelDateComponents(){
+		
+	}
+	
+	//MARK: VIEW CONTROLLER SETUP
+	
+	func testViewControllerAllUIExists(){
+		
+	}
+
+	
     
 }
