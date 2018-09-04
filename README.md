@@ -1,4 +1,9 @@
-#Root Code Test - Michael McKinney
+# Root Code Test - Michael McKinney
+
+### Abstract
+As an iOS engineer, when presenting my own programming, I prefer to showcase a complete, production quality application. In the case of the Root programming test, I've made a simple iOS app that follows industry standards for general architecture, code documentation and testing. 
+
+From an architectural standpoint, the application here follows MVVM (Model, View, View Model). By choosing MVVM, I avoid a common pitfall of iOS application design where one class, often the view model, becomes monolithic and encompasses every bit of logic. However, via MVVM, the application is easily split into separate pieces, each with a single responsibility. The three primary classes that make up the app are the `Driver`(Model), the `RCTMainViewController`(View) and the `RCTMainViewModel` (View Model). 
 
 - Since I am applying as an iOS engineer I made a simple mobile front end.
 	included several controls for a rapid development cycle
