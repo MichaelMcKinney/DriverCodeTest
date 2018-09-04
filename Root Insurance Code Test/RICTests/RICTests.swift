@@ -27,7 +27,6 @@ class RICTests: XCTestCase {
 		XCTAssert(testDriver.Name == "mrTest")
 		XCTAssert(testDriver.Distance == 0)
 		XCTAssert(testDriver.Speed == 0)
-		
 	}
 	
 	func testDriverAddFirstTrip(){
@@ -49,7 +48,6 @@ class RICTests: XCTestCase {
 		
 		XCTAssert(testDriver.Distance == 10)
 		XCTAssert(testDriver.Speed == 5)
-		
 	}
 	
 	func testDriverAddMultipleTrips(){
@@ -117,12 +115,6 @@ class RICTests: XCTestCase {
 	}
 	
 	//MARK: VIEW MODEL UTILITY FUNCTIONS
-	
-	func testViewModelInitialization(){
-		let testVM = RCTMainViewModel(Parent: RCTMainViewController())
-		
-		XCTAssert(testVM != nil)
-	}
 	
 	func testViewModelTimeStringValidation(){
 		let testVM = RCTMainViewModel(Parent: RCTMainViewController())

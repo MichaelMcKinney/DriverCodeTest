@@ -38,14 +38,14 @@ class Driver {
 		//find new average speed
 		let totalDist = Float(self.Distance) + Distance
 		
-		//TODO: math still incorrect, rounding error?
 		let newAvgSpeed = ((Float(self.Distance)/totalDist) * Float(self.Speed)) + ((Distance/totalDist) * Float(milesPerHour))
 		
 		//set new driver details
 		self.Speed = Int(round(newAvgSpeed))
 		self.Distance = Int(round(totalDist))
 		
-		print(self.ResultsSummary())
+		//Debug printing to make sure everything is running smoothly
+		//print(self.ResultsSummary())
 	}
 	
 	func ResultsSummary() -> String{
